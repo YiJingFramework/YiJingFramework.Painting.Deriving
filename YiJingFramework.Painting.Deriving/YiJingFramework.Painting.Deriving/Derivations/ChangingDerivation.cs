@@ -24,6 +24,16 @@ namespace YiJingFramework.Painting.Deriving.Derivations
         /// The indexes of the changing lines, starting from zero.
         /// </param>
         public ChangingDerivation(params int[] indexesOfTheChangingLines)
+            : this((IEnumerable<int>)indexesOfTheChangingLines) { }
+        /// <summary>
+        /// 创建一个新实例。
+        /// Initialize a new instance.
+        /// </summary>
+        /// <param name="indexesOfTheChangingLines">
+        /// 变爻的序号。从零开始计。
+        /// The indexes of the changing lines, starting from zero.
+        /// </param>
+        public ChangingDerivation(IEnumerable<int> indexesOfTheChangingLines)
         {
             if (indexesOfTheChangingLines is null)
                 throw new ArgumentNullException(nameof(indexesOfTheChangingLines));
