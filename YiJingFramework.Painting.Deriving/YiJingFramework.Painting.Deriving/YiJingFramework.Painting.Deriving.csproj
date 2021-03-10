@@ -15,6 +15,7 @@
     <RepositoryUrl>https://github.com/yueyinqiu/YiJingFramework.Painting.Deriving.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>zhouyi;i-ching;yijing;yijingframework</PackageTags>
+    <PackageId>YiJingFramework.Painting.Deriving</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

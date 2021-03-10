@@ -17,20 +17,6 @@ namespace YiJingFramework.Painting.Deriving.Exceptions
         /// 初始化一个新实例。
         /// Initialize a new instance.
         /// </summary>
-        public PaintingDerivationException() { }
-        /// <summary>
-        /// 初始化一个新实例。
-        /// Initialize a new instance.
-        /// </summary>
-        /// <param name="message">
-        /// 异常消息。
-        /// The message.
-        /// </param>
-        public PaintingDerivationException(string? message) : base(message) { }
-        /// <summary>
-        /// 初始化一个新实例。
-        /// Initialize a new instance.
-        /// </summary>
         /// <param name="message">
         /// 异常消息。
         /// The message.
@@ -39,7 +25,8 @@ namespace YiJingFramework.Painting.Deriving.Exceptions
         /// 内部异常。
         /// The inner exception.
         /// </param>
-        public PaintingDerivationException(string? message, Exception? inner) : base(message, inner) { }
+        public PaintingDerivationException(string? message = null, Exception? inner = null)
+            : base(message, inner) { }
         /// <summary>
         /// 
         /// </summary>
