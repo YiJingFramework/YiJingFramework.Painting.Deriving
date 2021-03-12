@@ -14,8 +14,8 @@ namespace YiJingFramework.Painting.Deriving.Derivations.Tests
         [TestMethod()]
         public void FunctionDerivationTest()
         {
-            GetCopying();
-            GetPureYang();
+            _ = GetCopying();
+            _ = GetPureYang();
         }
         private IDerivation GetCopying()
         {

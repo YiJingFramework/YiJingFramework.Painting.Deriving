@@ -18,7 +18,7 @@ namespace YiJingFramework.Painting.Deriving.Derivations.Tests
             _ = new ChangingDerivation(1, 2, 3);
             _ = new ChangingDerivation(new int[] { 1, 2, 3 });
             for (int i = 0; i < 100; i++) 
-                GetRandomDerivation();
+                _ = GetRandomDerivation();
         }
 
         readonly Random random = new Random();
