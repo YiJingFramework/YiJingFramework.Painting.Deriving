@@ -23,10 +23,10 @@ dotnet_sort_system_directives_first = false
 file_header_template = unset
 
 # this. 和 Me. 首选项
-dotnet_style_qualification_for_event = true
+dotnet_style_qualification_for_event = true:suggestion
 dotnet_style_qualification_for_field = true
 dotnet_style_qualification_for_method = true:suggestion
-dotnet_style_qualification_for_property = true
+dotnet_style_qualification_for_property = true:suggestion
 
 # 语言关键字与 bcl 类型首选项
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
