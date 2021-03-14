@@ -12,8 +12,8 @@ namespace YiJingFramework.Painting.Deriving.Derivations
     /// 这里的互卦指的是由本卦的第二、三、四、三、四、五爻重新组成的新卦。
     /// 这一变换过程只适用于六爻卦。
     /// Represents a paintings' derivation that will produce a overlapping hexagram
-    /// which will be made up of -- the second line, the third line, the forth line,
-    /// then the third line again, the forth line again and the fifth line -- of the original hexagram.
+    /// which will be made up of -- the second line, the third line, the fourth line,
+    /// then the third line again, the fourth line again and the fifth line -- of the original hexagram.
     /// This derivation can only be applied to hexagrams.
     /// </summary>
     public sealed class OverlappingDerivation : IDerivation

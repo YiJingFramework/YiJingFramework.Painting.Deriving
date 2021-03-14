@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YiJingFramework.Painting.Deriving.Exceptions;
 
 namespace YiJingFramework.Painting.Deriving.Derivations
 {
     /// <summary>
-    /// 生成错卦的卦画变换过程。
-    /// Represents a paintings' derivation that will produce a laterally linked hexagram
-    /// where the attributes of all the lines will be changed to the other.
+    /// 生成交卦的卦画变换过程。
+    /// 这一变换过程只适用于六爻卦。
+    /// Represents a paintings' derivation that will produce a interchanged hexagram
+    /// by swapping the upper trigram and the lower trigram.
+    /// This derivation can only be applied to hexagrams.
     /// </summary>
-    public sealed class LaterallyLinkingDerivation : IDerivation
+    public sealed class InterchangingDerivation : IDerivation
     {
         /// <summary>
         /// 变换指定的卦画，产生新卦画。
@@ -29,13 +32,20 @@ namespace YiJingFramework.Painting.Deriving.Derivations
         /// <paramref name="from"/> 是 <c>null</c>.
         /// <paramref name="from"/> is <c>null</c>.
         /// </exception>
+        /// <exception cref="PaintingDerivationException">
+        /// 传入的卦不是六爻卦。
+        /// The given painting isn't a hexagram.
+        /// </exception>
         public Core.Painting Derive(Core.Painting from)
         {
             if (from is null)
                 throw new ArgumentNullException(nameof(from));
-            var result = from line in @from
-                         select (Core.LineAttribute)((int)line ^ 1);
-            return new Core.Painting(result);
+            if (from.Count != 6)
+                throw new PaintingDerivationException("This derivation can only be applied to hexagrams.");
+
+            return new Core.Painting(
+                from[3], from[4], from[5],
+                from[0], from[1], from[2]);
         }
     }
 }

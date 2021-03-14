@@ -45,13 +45,8 @@ namespace YiJingFramework.Painting.Deriving.Derivations
             int i = 0;
             foreach (var line in from)
             {
-                if (!this.indexesOfTheChangingLines.Contains(i++))
-                    yield return line;
-                else
-                {
-                    var boolValue = Convert.ToBoolean((int)line);
-                    yield return (Core.LineAttribute)Convert.ToInt32(!boolValue);
-                }
+                yield return (Core.LineAttribute)
+                    ((int)line ^ Convert.ToInt32(this.indexesOfTheChangingLines.Contains(i++)));
             }
         }
 
