@@ -5,17 +5,18 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Authors>yueyinqiu5990</Authors>
     <Description>YiJingFramework is a C# library (group) about Yi Jing.</Description>
     <Copyright>Copyright © 2021 yueyinqiu5990. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/yueyinqiu/YiJingFramework.Painting.Deriving/wiki</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/YiJingFramework/YiJingFramework.Painting.Deriving/wiki</PackageProjectUrl>
     <PackageIcon>Taichi.png</PackageIcon>
-    <RepositoryUrl>https://github.com/yueyinqiu/YiJingFramework.Painting.Deriving.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/YiJingFramework/YiJingFramework.Painting.Deriving.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>zhouyi;i-ching;yijing;yijingframework</PackageTags>
     <PackageId>YiJingFramework.Painting.Deriving</PackageId>
+    <Company>YiJingFramework</Company>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
