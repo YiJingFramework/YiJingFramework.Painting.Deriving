@@ -34,7 +34,7 @@ namespace YiJingFramework.Painting.Deriving.Derivations
             if (from is null)
                 throw new ArgumentNullException(nameof(from));
             var result = from line in @from
-                         select (Core.LineAttribute)((int)line ^ 1);
+                         select (Core.YinYang)((int)line ^ 1);
             return new Core.Painting(result);
         }
     }

@@ -40,12 +40,12 @@ namespace YiJingFramework.Painting.Deriving.Derivations
             this.indexesOfTheChangingLines = new();
             this.indexesOfTheChangingLines.AddRange(indexesOfTheChangingLines);
         }
-        private IEnumerable<Core.LineAttribute> GetDerivedLines(Core.Painting from)
+        private IEnumerable<Core.YinYang> GetDerivedLines(Core.Painting from)
         {
             int i = 0;
             foreach (var line in from)
             {
-                yield return (Core.LineAttribute)
+                yield return (Core.YinYang)
                     ((int)line ^ Convert.ToInt32(this.indexesOfTheChangingLines.Contains(i++)));
             }
         }

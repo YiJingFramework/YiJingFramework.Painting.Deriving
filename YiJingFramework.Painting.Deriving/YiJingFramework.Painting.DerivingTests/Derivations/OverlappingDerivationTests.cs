@@ -23,12 +23,12 @@ namespace YiJingFramework.Painting.Deriving.Derivations.Tests
             {
                 var d = GetDerivation();
                 var lineCount = 6;
-                List<Core.LineAttribute> r1 = new List<Core.LineAttribute>();
-                List<Core.LineAttribute> r2 = new List<Core.LineAttribute>();
+                List<Core.YinYang> r1 = new List<Core.YinYang>();
+                List<Core.YinYang> r2 = new List<Core.YinYang>();
                 for (int j = 0; j < lineCount; j++)
                 {
                     var line = random.Next(0, 1);
-                    r1.Add((Core.LineAttribute)line);
+                    r1.Add((Core.YinYang)line);
                 }
                 r2.Add(r1[1]);
                 r2.Add(r1[2]);

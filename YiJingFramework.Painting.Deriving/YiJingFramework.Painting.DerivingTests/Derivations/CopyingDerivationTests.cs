@@ -23,11 +23,11 @@ namespace YiJingFramework.Painting.Deriving.Derivations.Tests
             {
                 var d = GetDerivation();
                 var lineCount = random.Next(0, 10);
-                List<Core.LineAttribute> r1 = new List<Core.LineAttribute>();
+                List<Core.YinYang> r1 = new List<Core.YinYang>();
                 for (int j = 0; j < lineCount; j++)
                 {
                     var line = random.Next(0, 1);
-                    r1.Add((Core.LineAttribute)line);
+                    r1.Add((Core.YinYang)line);
                 }
                 Assert.AreEqual(new Core.Painting(r1), d.Derive(new Core.Painting(r1)));
             }

@@ -39,16 +39,16 @@ namespace YiJingFramework.Painting.Deriving.Derivations.Tests
             {
                 var (d, t) = GetRandomDerivation();
                 var lineCount = random.Next(0, 10);
-                List<Core.LineAttribute> r1 = new List<Core.LineAttribute>();
-                List<Core.LineAttribute> r2 = new List<Core.LineAttribute>();
+                List<Core.YinYang> r1 = new List<Core.YinYang>();
+                List<Core.YinYang> r2 = new List<Core.YinYang>();
                 for (int j = 0; j < lineCount; j++)
                 {
                     var line = random.Next(0, 1);
-                    r1.Add((Core.LineAttribute)line);
+                    r1.Add((Core.YinYang)line);
                     if (t.Contains(j))
-                        r2.Add((Core.LineAttribute)Convert.ToInt32(!Convert.ToBoolean(line)));
+                        r2.Add((Core.YinYang)Convert.ToInt32(!Convert.ToBoolean(line)));
                     else
-                        r2.Add((Core.LineAttribute)line);
+                        r2.Add((Core.YinYang)line);
                 }
                 Assert.AreEqual(new Core.Painting(r2), d.Derive(new Core.Painting(r1)));
                 Assert.AreEqual(new Core.Painting(r1), d.Derive(new Core.Painting(r2)));
