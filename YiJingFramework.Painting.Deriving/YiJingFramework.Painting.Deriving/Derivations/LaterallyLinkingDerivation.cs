@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YiJingFramework.Core;
 
 namespace YiJingFramework.Painting.Deriving.Derivations
 {
@@ -34,7 +35,7 @@ namespace YiJingFramework.Painting.Deriving.Derivations
             if (from is null)
                 throw new ArgumentNullException(nameof(from));
             var result = from line in @from
-                         select (Core.YinYang)((int)line ^ 1);
+                         select !line;
             return new Core.Painting(result);
         }
     }

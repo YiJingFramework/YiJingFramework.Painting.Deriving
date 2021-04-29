@@ -45,8 +45,8 @@ namespace YiJingFramework.Painting.Deriving.Derivations
             int i = 0;
             foreach (var line in from)
             {
-                yield return (Core.YinYang)
-                    ((int)line ^ Convert.ToInt32(this.indexesOfTheChangingLines.Contains(i++)));
+                yield return new Core.YinYang(
+                    line.IsYang ^ this.indexesOfTheChangingLines.Contains(i++));
             }
         }
 
