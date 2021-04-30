@@ -30,7 +30,7 @@ namespace Examples
 
             derivation = new FunctionDerivation((painting) =>
             {
-                return new Painting(painting.Select((_, _) => LineAttribute.Yang));
+                return new Painting(painting.Select((_, _) => YinYang.Yang));
             });
             // This derivation will turn all the lines to yang lines.
             Console.WriteLine($"110000 -f> {derivation.Derive(painting)}");
@@ -43,7 +43,7 @@ namespace Examples
             // Output: 110000 -o2> 100000
 
             Console.WriteLine($"110000 -o2> " +
-                $"{painting.ApplyDerivation((_) => new Painting(LineAttribute.Yang))}");
+                $"{painting.ApplyDerivation((_) => new Painting(YinYang.Yang))}");
             Console.WriteLine();
             // Output: 110000 -o2> 1
             #endregion
