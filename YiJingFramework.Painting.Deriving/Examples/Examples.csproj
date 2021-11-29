@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="YiJingFramework.Core" Version="3.0.0" />
-    <PackageReference Include="YiJingFramework.Painting.Deriving" Version="2.0.0" />
+    <ProjectReference Include="..\YiJingFramework.Painting.Deriving\YiJingFramework.Painting.Deriving.csproj" />
   </ItemGroup>
 
 </Project>

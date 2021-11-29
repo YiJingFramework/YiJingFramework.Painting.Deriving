@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.0.0</Version>
+    <Version>3.0.0</Version>
     <Authors>yueyinqiu5990</Authors>
-    <Description>YiJingFramework is a C# library (group) about Yi Jing.</Description>
+    <Description>YiJingFramework.Painting.Deriving provides lots of frequently used painting derivations.</Description>
     <Copyright>Copyright © 2021 yueyinqiu5990. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/YiJingFramework/YiJingFramework.Painting.Deriving/wiki</PackageProjectUrl>
@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="YiJingFramework.Core" Version="3.0.0" />
+    <PackageReference Include="YiJingFramework.Core" Version="4.0.0" />
   </ItemGroup>
 
   <ItemGroup>
