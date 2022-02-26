@@ -176,6 +176,38 @@ namespace YiJingFramework.Painting.Deriving.Extensions
         }
         #endregion
 
+        #region InterchangingDerivation
+        private static readonly InterchangingDerivation interchangingDerivation = new InterchangingDerivation();
+
+        /// <summary>
+        /// 获取交卦卦画。
+        /// Get the interchanged painting.
+        /// </summary>
+        /// <param name="from">
+        /// 要变换的卦画。
+        /// The painting to derive from.
+        /// </param>
+        /// <returns>
+        /// 变换结果。
+        /// The derived painting.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="from"/> 是 <c>null</c>.
+        /// <paramref name="from"/> is <c>null</c>.
+        /// </exception>
+        /// <exception cref="PaintingDerivationException">
+        /// 传入的卦不是六爻卦。
+        /// The given painting isn't a hexagram.
+        /// </exception>
+        public static Core.Painting ToInterchanged(
+            this Core.Painting from)
+        {
+            if (from is null)
+                throw new ArgumentNullException(nameof(from));
+            return interchangingDerivation.Derive(from);
+        }
+        #endregion
+
         #region LaterallyLinkingDerivation
         private static readonly LaterallyLinkingDerivation laterallyLinkingDerivation = new LaterallyLinkingDerivation();
         /// <summary>

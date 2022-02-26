@@ -166,7 +166,7 @@ namespace YiJingFramework.Painting.Deriving.Extensions
         private static readonly InterchangingComparer interchangingComparer = new InterchangingComparer();
 
         /// <summary>
-        /// 判断目标卦是否是基础卦的变卦。
+        /// 判断目标卦是否是基础卦的交卦。
         /// Judge whether the object painting is interchanged from the basis.
         /// </summary>
         /// <param name="obj">
@@ -266,7 +266,7 @@ namespace YiJingFramework.Painting.Deriving.Extensions
         }
         #endregion
 
-        #region OverlappingComparer
+        #region OverturningComparer
         private static readonly OverturningComparer overturningComparer = new OverturningComparer();
 
         /// <summary>

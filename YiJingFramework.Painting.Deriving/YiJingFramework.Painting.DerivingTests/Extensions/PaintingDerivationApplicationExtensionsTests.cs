@@ -161,5 +161,28 @@ namespace YiJingFramework.Painting.Deriving.Extensions.Tests
                     new Core.Painting(r1).ToOverturned());
             }
         }
+
+        [TestMethod()]
+        public void ToInterchangedTest()
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                var lineCount = 6;
+                List<Core.YinYang> r1 = new List<Core.YinYang>();
+                List<Core.YinYang> r2 = new List<Core.YinYang>();
+                for (int j = 0; j < lineCount; j++)
+                {
+                    var line = random.Next(0, 1);
+                    r1.Add((Core.YinYang)line);
+                }
+                r2.Add(r1[3]);
+                r2.Add(r1[4]);
+                r2.Add(r1[5]);
+                r2.Add(r1[0]);
+                r2.Add(r1[1]);
+                r2.Add(r1[2]);
+                Assert.AreEqual(new Core.Painting(r2), new Core.Painting(r1).ToOverturned());
+            }
+        }
     }
 }
